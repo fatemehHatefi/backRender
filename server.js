@@ -22,7 +22,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes); // Use /api/auth as the prefix for authentication routes
 app.use('/api/wishlist', wishlistRoutes);
-app.use('/api/reviews', reviewRoutes); // Use /api/reviews as the prefix for review routes
 
 // Root route
 app.get('/', (req, res) => {
