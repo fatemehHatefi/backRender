@@ -67,8 +67,10 @@ app.get('/user', async (req, res) => {
 // Get movie by ID
 app.get('/movies/:id', async (req, res) => {
   const { id } = req.params;
+  console.log(id);
   try {
     const movie = await Movie.findById(id);
+    console.log(movie);
     if (movie) {
       res.json(movie);
     } else {
